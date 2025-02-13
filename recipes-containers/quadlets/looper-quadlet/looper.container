@@ -1,7 +1,7 @@
 [Unit]
 Description=A looper container
 After=time-sync.target
-Wants=time-sync.target
+Wants=time-sync.target systemd-time-wait-sync.service
 
 [Container]
 ContainerName=looper
