@@ -1,5 +1,7 @@
 [Unit]
 Description=A looper container
+After=time-sync.target
+Wants=time-sync.target
 
 [Container]
 ContainerName=looper
