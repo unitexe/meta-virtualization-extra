@@ -1,0 +1,9 @@
+[Unit]
+Description=A looper container
+
+[Container]
+ContainerName=looper
+Image=ghcr.io/resilem/looper:latest
+
+[Install]
+WantedBy=multi-user.target default.target
