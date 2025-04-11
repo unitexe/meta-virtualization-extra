@@ -11,7 +11,7 @@ inherit packagegroup
 RDEPENDS:${PN}:append = " kernel-modules"
 
 # Checkpoint/restore
-#RDEPENDS:${PN}:append = " criu"
+RDEPENDS:${PN}:append = " criu"
 RDEPENDS:${PN}:append = " tar"
 
 # Rootless containers
