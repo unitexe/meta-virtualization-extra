@@ -5,7 +5,7 @@ Wants=time-sync.target systemd-time-wait-sync.service
 
 [Container]
 ContainerName=looper
-Image=ghcr.io/resilem/looper:latest
+Image=ghcr.io/unitexe/looper:latest
 
 [Install]
 WantedBy=multi-user.target default.target
