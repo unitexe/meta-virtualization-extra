@@ -7,5 +7,12 @@ Wants=time-sync.target systemd-time-wait-sync.service
 ContainerName=looper
 Image=ghcr.io/unitexe/looper:latest
 
+[Service]
+Restart=on-failure
+RestartSec=10s
+RestartSteps=5
+RestartMaxDelaySec=1min
+TimeoutStartSec=15min
+
 [Install]
 WantedBy=multi-user.target default.target
