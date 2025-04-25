@@ -1,0 +1,23 @@
+[Unit]
+Description=A nebula container
+After=time-sync.target
+Wants=time-sync.target systemd-time-wait-sync.service
+
+[Container]
+ContainerName=nebula
+Image=docker.io/nebulaoss/nebula:latest
+Volume=/etc/nebula/pki:/etc/nebula
+Volume=/etc/nebula/cfg:/config
+Network=host
+AddCapability=NET_ADMIN
+AddDevice=/dev/net/tun
+
+[Service]
+Restart=on-failure
+RestartSec=10s
+RestartSteps=5
+RestartMaxDelaySec=1min
+TimeoutStartSec=15min
+
+[Install]
+WantedBy=multi-user.target default.target
