@@ -3,9 +3,12 @@ DESCRIPTION = "A quadlet for a looper container"
 AUTHOR = "unitexe"
 SECTION = "unit"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
+LIC_FILES_CHKSUM = "file://${UNPACKDIR}/LICENSE;md5=38bf13be5d6979b28bd8adddb2f2f9b3"
 
-SRC_URI = "file://looper.container"
+SRC_URI = "\
+    file://looper.container \
+    file://LICENSE \
+"
 
 S = "${WORKDIR}/sources"
 UNPACKDIR = "${S}"
