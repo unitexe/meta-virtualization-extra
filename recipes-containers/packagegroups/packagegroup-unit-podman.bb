@@ -28,3 +28,6 @@ RDEPENDS:${PN}:append = " netavark"
 RDEPENDS:${PN}:append = " podman"
 RDEPENDS:${PN}:append = " podman-tui"
 RDEPENDS:${PN}:append = " podman-compose"
+
+# Working with registries
+RDEPENDS:${PN}:append = " skopeo"
