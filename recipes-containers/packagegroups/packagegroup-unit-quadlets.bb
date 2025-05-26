@@ -9,3 +9,4 @@ inherit packagegroup
 
 RDEPENDS:${PN}:append = " looper-quadlet"
 RDEPENDS:${PN}:append = " nebula-quadlet"
+RDEPENDS:${PN}:append = " registry-quadlet"
