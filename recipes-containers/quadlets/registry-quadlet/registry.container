@@ -6,7 +6,7 @@ Wants=time-sync.target systemd-time-wait-sync.service regkeygen.service
 [Container]
 ContainerName=registry
 Image=docker.io/registry:latest
-PublishPort=5000:5000
+PublishPort=127.0.0.1:5000:5000
 Volume=/etc/registry:/certs
 Environment=REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt
 Environment=REGISTRY_HTTP_TLS_KEY=/certs/domain.key
