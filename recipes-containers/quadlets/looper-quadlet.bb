@@ -10,8 +10,7 @@ SRC_URI = "\
     file://LICENSE \
 "
 
-S = "${WORKDIR}/sources"
-UNPACKDIR = "${S}"
+S = "${UNPACKDIR}"
 
 do_install() {
     install -D -p -m 0644 ${UNPACKDIR}/looper.container ${D}${sysconfdir}/containers/systemd/looper.container

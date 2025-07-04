@@ -12,8 +12,7 @@ SRC_URI = "\
 
 RDEPENDS:${PN}:append = " systemd-regkeygen"
 
-S = "${WORKDIR}/sources"
-UNPACKDIR = "${S}"
+S = "${UNPACKDIR}"
 
 do_install() {
     install -D -p -m 0644 ${UNPACKDIR}/registry.container ${D}${sysconfdir}/containers/systemd/registry.container

@@ -10,12 +10,11 @@ SRC_URI = "\
     file://regkeygen.sh \
 "
 
-S = "${WORKDIR}/sources"
-UNPACKDIR = "${S}"
+S = "${UNPACKDIR}"
 
 do_install() {
-    install -D -p -m0644 ${S}/regkeygen.service ${D}${systemd_system_unitdir}/regkeygen.service
-    install -D -p -m0755 ${S}/regkeygen.sh ${D}${bindir}/regkeygen.sh
+    install -D -p -m0644 ${UNPACKDIR}/regkeygen.service ${D}${systemd_system_unitdir}/regkeygen.service
+    install -D -p -m0755 ${UNPACKDIR}/regkeygen.sh ${D}${bindir}/regkeygen.sh
 }
 
 inherit systemd

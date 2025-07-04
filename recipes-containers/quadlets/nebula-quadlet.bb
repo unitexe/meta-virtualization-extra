@@ -10,8 +10,7 @@ SRC_URI = "\
     file://LICENSE \
 "
 
-S = "${WORKDIR}/sources"
-UNPACKDIR = "${S}"
+S = "${UNPACKDIR}"
 
 do_install() {
     install -d -p ${D}${sysconfdir}/nebula/pki
