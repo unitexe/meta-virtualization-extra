@@ -15,7 +15,6 @@ RDEPENDS:${PN}:append = " criu"
 RDEPENDS:${PN}:append = " tar"
 
 # Rootless containers
-RDEPENDS:${PN}:append = " dbus"
 RDEPENDS:${PN}:append = " dbus-broker"
 RDEPENDS:${PN}:append = " libpam"
 RDEPENDS:${PN}:append = " passt"
