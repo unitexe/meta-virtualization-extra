@@ -96,5 +96,5 @@ podman run -it localhost:5000/alpine /bin/sh
 
 ## Run nebula lighthouse in container
 ```bash
-sudo podman run -d --name nebula --network host --cap-add NET_ADMIN --device=/dev/net/tun --volume /home/$(whoami)$/.nebula/lighthouse/keys:/etc/nebula --volume /home/$(whoami)/.nebula/lighthouse/config:/config docker.io/nebulaoss/nebula:latest
+sudo podman run -d --name nebula --network host --cap-add NET_ADMIN --device=/dev/net/tun --volume /home/$(whoami)/.nebula/lighthouse/keys:/etc/nebula --volume /home/$(whoami)/.nebula/lighthouse/config:/config docker.io/nebulaoss/nebula:latest
 ```
