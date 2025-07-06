@@ -12,3 +12,7 @@ openssl req -x509 -newkey rsa:4096 -keyout /etc/registry/domain.key -out /etc/re
 mkdir -p /usr/local/share/ca-certificates
 cp /etc/registry/domain.crt /usr/local/share/ca-certificates/registry.crt
 update-ca-certificates
+
+# Add CA to containers trust store
+mkdir -p /etc/containers/certs.d/localhost:5000/
+cp /etc/registry/domain.crt /etc/containers/certs.d/localhost:5000/ca.crt
