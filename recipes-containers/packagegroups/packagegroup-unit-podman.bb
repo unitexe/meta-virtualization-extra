@@ -30,3 +30,6 @@ RDEPENDS:${PN}:append = " podman-compose"
 
 # Working with registries
 RDEPENDS:${PN}:append = " skopeo"
+
+# Working with container images
+RDEPENDS:${PN}:append = " umoci"
