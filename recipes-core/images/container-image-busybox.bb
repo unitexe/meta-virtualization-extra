@@ -10,7 +10,7 @@ IMAGE_FEATURES = ""
 IMAGE_LINGUAS = ""
 NO_RECOMMENDATIONS = "1"
 
-OCI_IMAGE_TAG = "1.37.0-${TCLIBC}"
+OCI_IMAGE_TAG = "1.37.0${@['', '-${TCLIBC}'][d.getVar('TCLIBC') == 'musl']}"
 
 IMAGE_INSTALL = " \
     base-files \
