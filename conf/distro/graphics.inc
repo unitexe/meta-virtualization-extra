@@ -1,1 +1,1 @@
-DISTRO_FEATURES:append = " opengl"
+DISTRO_FEATURES:append = " opengl wayland"
