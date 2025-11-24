@@ -12,8 +12,6 @@ IMAGE_FSTYPES = "container oci"
 inherit image
 inherit image-oci
 
-CONTAINER_SHELL ?= "${@bb.utils.contains('PACKAGE_EXTRA_ARCHS', 'container-dummy-provides', 'container-dummy-provides', 'busybox', d)}"
-
 OCI_IMAGE_ENTRYPOINT = "/usr/bin/bmaptool"
 OCI_IMAGE_TAG = "3.9.0${@['', '-${TCLIBC}'][d.getVar('TCLIBC') == 'musl']}"
 
@@ -25,7 +23,6 @@ IMAGE_INSTALL = " \
     base-files \
     base-passwd \
     netbase \
-    ${CONTAINER_SHELL} \
     bmaptool \
 "
 
